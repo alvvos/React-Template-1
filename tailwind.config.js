@@ -6,7 +6,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'primary': '#252525'
+        'primary': '#0f0e17',
+        'secondary': '#332f4d',
+        'accent': '#7f5af0',
+        'light': '#fffffe',
+        'dark': '#010101',
+        'purple-dark': '#2a2156',
+        'purple-light': '#d412ff',
+        'dark-blue': '#32007f'
       }
     },
     fontFamily: {
