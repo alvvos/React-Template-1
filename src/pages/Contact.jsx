@@ -78,7 +78,7 @@ const Contact = () => {
                         playsInline
                         className="w-full h-full object-cover opacity-70"
                     >
-                        <source src="/video.mp4" type="video/mp4" />
+                        <source src="/video_2.mp4" type="video/mp4" />
                     </video>
                     <div className="absolute inset-0 bg-black opacity-40 pointer-events-none"></div>
                 </div>
@@ -220,7 +220,7 @@ const Contact = () => {
 
             <section className="py-20 bg-gradient-to-br from-black to-gray-900/80">
                 <div className="max-w-7xl mx-auto px-4">
-                    <h2 className="text-2xl md:text-2xl mb-12 text-center font-Garet">Preguntas frecuentes</h2>
+                    <h2 className="text-7xl md:text-5xl mb-12 text-center font-Garet">Preguntas frecuentes</h2>
 
                     <div className="max-w-3xl mx-auto space-y-4">
                         {[

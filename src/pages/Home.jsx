@@ -79,35 +79,38 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-            <section className="py-20 px-4 w-full mx-auto">
-                <h2 className="text-3xl md:text-4xl mb-16 text-center font-Garet animate-fadeIn [animation-fill-mode:forwards] [animation-delay:0.5s]">
+            <section className="pt-12 md:pt-20 px-4 w-full max-w-7xl mx-auto">
+                <h2 className="text-3xl md:text-5xl mb-12 md:mb-20 text-center font-Garet animate-fadeIn [animation-fill-mode:forwards] [animation-delay:0.5s]">
                     Lo que ofrezco
                 </h2>
                 <div className="flex justify-center">
-                    <div className="grid md:grid-cols-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
                         {[
-                            { title: "Estudiamos tus proyectos y tus ideas juntos", desc: "Analizamos detalladamente tu caso, vemos en que consiste, tu negocio, producto, que enfoque buscas y que necesitas.", icon: "" },
-                            { title: "Proyectamos como lo vamos hacer", desc: "Le explicaré que proceso vamos a llevar acabo juntos para su proyecto, siempre trabajando de manera eficaz para el mayor rendimiento posible.", icon: "" },
-                            { title: "Trabajamos juntos en ello", desc: "Daremos nuestro 100% en el momento de la verdad, un trabajo en un ambiente agradable y dinámico.", icon: "" },
-                            { title: "Disfrutar del buen resultado", desc: "Daremos nuestro 100% en el momento de la verdad, un trabajo en un ambiente agradable y dinámico.", icon: "" }
-
+                            { title: "Estudiamos tus proyectos y tus ideas juntos", desc: "Analizamos detalladamente tu caso, vemos en que consiste, tu negocio, producto, que enfoque buscas y que necesitas.", icon: "/icons/book.png" },
+                            { title: "Proyectamos como lo vamos hacer", desc: "Le explicaré que proceso vamos a llevar acabo juntos para su proyecto, siempre trabajando de manera eficaz para el mayor rendimiento posible.", icon: "/icons/creative.png" },
+                            { title: "Trabajamos juntos en ello", desc: "Daremos nuestro 100% en el momento de la verdad, un trabajo en un ambiente agradable y dinámico.", icon: "/icons/hands.png" },
+                            { title: "Disfrutar del buen resultado", desc: "No existe mejor fórmula que una buena proyección y encontrar la incógnita de un buen proyecto realizado.", icon: "/icons/verified.png" }
                         ].map((service, i) => (
                             <div
                                 key={i}
-                                className="w-96 h-64 mx-24 border border-white/20 p-8 rounded-lg backdrop-blur-sm bg-white/5 hover:bg-white/10 transition-all duration-500 opacity-0 animate-fadeInUp"
-                                style={{ animationDelay: `2s`, animationFillMode: 'forwards' }}
+                                className="w-full text-center min-h-auto border border-white/20 p-6 rounded-lg backdrop-blur-sm bg-white/5 hover:bg-white/10 transition-all duration-500 opacity-0 animate-fadeInUp"
+                                style={{ animationDelay: `${0.5 + i * 0.2}s`, animationFillMode: 'forwards' }}
                             >
-                                <div className="text-4xl mb-4">{service.icon}</div>
-                                <h3 className="text-xl font-medium mb-2">{service.title}</h3>
-                                <p className="text-white/80">{service.desc}</p>
+                                {service.icon && (
+                                    <div className="mb-4 flex justify-center">
+                                        <img src={service.icon} alt="" className="w-35 h-20" />
+                                    </div>
+                                )}
+                                <h3 className="text-lg md:text-xl font-medium mb-2">{service.title}</h3>
+                                <p className="text-white/80 text-sm md:text-base">{service.desc}</p>
                             </div>
                         ))}
                     </div>
                 </div>
             </section>
-            <section className="pb-20 bg-black/90">
+            <section className="pb-20 bg-black/90 mt-20">
                 <div className="max-w-7xl mx-auto px-4">
-                    <h2 className="text-3xl md:text-4xl mb-20 text-center">Proyectos destacados</h2>
+                    <h2 className="text-3xl md:text-5xl font-Garet mb-20 text-center">Clientes destacados</h2>
 
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                         {Array.from({ length: 6 }).map((_, i) => (
@@ -117,7 +120,7 @@ const Home = () => {
                             >
                                 <img
                                     src={`/project-${i + 1}.jpg`}
-                                    alt={`Proyecto ${i + 1}`}
+                                    alt={``}
                                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                                 />
                                 <div className="absolute inset-0 bg-black/50 group-hover:bg-black/70 flex items-center justify-center transition-all duration-500">
@@ -130,9 +133,9 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-            <section className="w-full min-h-[60vh] flex items-center justify-center bg-gradient-to-br from-black to-dark-blue bg-opac">
+            <section className="w-full min-h-[60vh] flex items-center justify-center bg-gradient-to-br from-black to-gray-900/80">
                 <div className="text-center max-w-4xl px-4">
-                    <h2 className="text-4xl md:text-5xl mb-8">¿Listo para crear algo increíble?</h2>
+                    <h2 className="text-3xl font-Garet md:text-3xl mb-8">¿Listo para crear algo increíble?</h2>
                     <p className="text-xl mb-12 text-white/80 max-w-lg mx-auto">
                         Hablemos sobre cómo puedo ayudar a llevar tu visión a la pantalla.
                     </p>
