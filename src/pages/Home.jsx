@@ -7,7 +7,7 @@ const Home = () => {
     const heroRef = useRef(null);
     const [scrollProgress, setScrollProgress] = useState(0);
     const [headline, setHeadline] = useState('');
-    const fullText = "Filmmaker and Photography";
+    const fullText = "Solicita tu presupuesto";
     const [currentIndex, setCurrentIndex] = useState(0);
     const bounceRef = useRef(null);
     const navigate = useNavigate();
@@ -99,7 +99,7 @@ const Home = () => {
                 <div className="relative z-10 text-center px-4 md:px-6 max-w-4xl">
                     <h1 className="text-4xl md:text-7xl font-Garet mb-4 md:mb-6 tracking-tight">
                         <span className="block font-bold mb-2 md:mb-4 bg-clip-text text-transparent bg-gradient-to-r from-light to-accent animate-gentle-blink">
-                            SALÍSTUDIOS
+                            Te ayudamos con tu TFG o TFM
                         </span>
                         <span className="text-lg md:text-3xl font-Poppins-Medium border-t pt-4 md:pt-6 border-accent/30">
                             {headline}<span className="animate-pulse">|</span>
