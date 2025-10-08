@@ -60,7 +60,7 @@ const Navbar = ({ scrollProgress, isMobile }) => {
                         onClick={scrollToTop}
                     >
                         <h1 className="font-Garet font-bold text-2xl md:text-3xl tracking-tight cursor-pointer hover:text-gray-300 transition-colors">
-                            <Image />
+
                             {!isMobile && (
                                 <span className="text-gray-400 font-normal ml-2">| Garantía Turnitin</span>
                             )}
