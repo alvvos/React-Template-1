@@ -1,112 +1,112 @@
 {
-    "reviews": [
-        {
-            "id": 1,
-            "texto": "Increíble servicio. Me ayudaron con mi tesis de maestría y el resultado fue excepcional. Mi tutor quedó impresionado con la calidad de la investigación y la profundidad del análisis. ¡Totalmente recomendados!",
-            "estrellas": 5,
-            "autor": "Ana María Rodríguez",
-            "carrera": "Maestría en Educación",
-            "proyecto": "Tesis Doctoral",
-            "fecha": "15 Jul 2024"
-        },
-        {
-            "id": 2,
-            "texto": "Como estudiante de ingeniería con poco tiempo, su equipo me salvó. El proyecto de programación fue entregado a tiempo y con una documentación perfecta. El código era limpio y bien estructurado.",
-            "estrellas": 5,
-            "autor": "Carlos",
-            "carrera": "Ingeniería de Sistemas",
-            "proyecto": "Proyecto de Software",
-            "fecha": "22 Jun 2024"
-        },
-        {
-            "id": 3,
-            "texto": "La asesoría en metodología de investigación fue fundamental para mi trabajo de grado. Los profesionales son altamente capacitados y muy accesibles. Respondían todas mis dudas rápidamente.",
-            "estrellas": 5,
-            "autor": "María F.",
-            "carrera": "Psicología",
-            "proyecto": "Trabajo de Grado",
-            "fecha": "10 May 2024"
-        },
-        {
-            "id": 4,
-            "texto": "Excelente atención al cliente desde el primer momento. Me guiaron en cada paso del proceso y el resultado final superó todas mis expectativas. ¡Los volvería a contratar sin dudarlo!",
-            "estrellas": 5,
-            "autor": "Juan D.",
-            "carrera": "Administración de Empresas",
-            "proyecto": "Proyecto de Investigación",
-            "fecha": "18 May 2024"
-        },
-        {
-            "id": 5,
-            "texto": "El análisis estadístico que realizaron para mi investigación fue absolutamente impecable. Los gráficos eran profesionales y las conclusiones estaban muy bien fundamentadas. Obtuve la máxima calificación.",
-            "estrellas": 5,
-            "autor": "Laura",
-            "carrera": "Sociología",
-            "proyecto": "Análisis Estadístico",
-            "fecha": "25 Feb 2024"
-        },
-        {
-            "id": 6,
-            "texto": "Aunque inicialmente el costo me pareció una inversión, valió cada centavo. La calidad del trabajo final fue extraordinaria y me ayudó a obtener la máxima calificación en mi proyecto de arquitectura.",
-            "estrellas": 5,
-            "autor": "Roberto",
-            "carrera": "Arquitectura",
-            "proyecto": "Proyecto Final",
-            "fecha": "12 Jul 2024"
-        },
-        {
-            "id": 7,
-            "texto": "Servicio excepcional. Cumplieron con todos los plazos y el trabajo fue de primera calidad. La comunicación fue fluida en todo momento y se adaptaron a mis necesidades específicas.",
-            "estrellas": 5,
-            "autor": "Sofia A.",
-            "carrera": "Derecho",
-            "proyecto": "Ensayo Académico",
-            "fecha": "08 Jun 2024"
-        },
-        {
-            "id": 8,
-            "texto": "Quedé maravillado con la calidad del trabajo. No solo cumplieron con lo solicitado, sino que agregaron valor con insights que no había considerado. Profesionales de verdad.",
-            "estrellas": 5,
-            "autor": "Miguel L. R.",
-            "carrera": "Medicina",
-            "proyecto": "Revisión Sistemática",
-            "fecha": "03 May 2024"
-        },
-        {
-            "id": 9,
-            "texto": "El mejor servicio académico que he contratado. La dedicación y profesionalismo del equipo se reflejó en un trabajo impecable que recibió felicitaciones de mis profesores.",
-            "estrellas": 5,
-            "autor": "Daniela Carolina C.",
-            "carrera": "Comunicación Social",
-            "proyecto": "Proyecto Multimedia",
-            "fecha": "28 May 2023"
-        },
-        {
-            "id": 10,
-            "texto": "Increíble experiencia de principio a fin. Desde la asesoría inicial hasta la entrega final, todo fue perfecto. El trabajo superó mis expectativas y aprendí mucho en el proceso.",
-            "estrellas": 5,
-            "autor": "Andrés F.",
-            "carrera": "Economía",
-            "proyecto": "Análisis Económico",
-            "fecha": "20 Jun 2025"
-        },
-        {
-            "id": 11,
-            "texto": "Recomiendo ampliamente sus servicios. La calidad del trabajo es consistentemente alta y el trato es muy profesional. Han sido clave en mi éxito académico.",
-            "estrellas": 5,
-            "autor": "Valentina S. L.",
-            "carrera": "Ingeniería Civil",
-            "proyecto": "Diseño Estructural",
-            "fecha": "14 Jul 2024"
-        },
-        {
-            "id": 12,
-            "texto": "Simplemente perfecto. Entregaron antes del plazo, el trabajo estaba excelentemente documentado y recibí soporte incluso después de la entrega. Servicio 10/10.",
-            "estrellas": 5,
-            "autor": "Javier A.",
-            "carrera": "Ciencias Políticas",
-            "proyecto": "Análisis Político",
-            "fecha": "05 May 2023"
-        }
-    ]
+  "reviews": [
+    {
+      "id": 1,
+      "texto": "Increíble servicio. Me ayudaron con mi tfg y el resultado fue excepcional. Mi tutor quedó impresionado con la calidad de la investigación y la profundidad del análisis. ¡Totalmente recomendados!",
+      "estrellas": 5,
+      "autor": "Ana María Rodríguez",
+      "carrera": "Maestría en Educación",
+      "proyecto": "TFG",
+      "fecha": "15 Jul 2024"
+    },
+    {
+      "id": 2,
+      "texto": "Como estudiante de ingeniería con poco tiempo, su equipo me salvó. El proyecto de programación fue entregado a tiempo y con una documentación perfecta. El código era limpio y bien estructurado.",
+      "estrellas": 5,
+      "autor": "Carlos",
+      "carrera": "Ingeniería de Sistemas",
+      "proyecto": "Proyecto de Software",
+      "fecha": "22 Jun 2024"
+    },
+    {
+      "id": 3,
+      "texto": "La asesoría en metodología de investigación fue fundamental para mi trabajo de grado. Los profesionales son altamente capacitados y muy accesibles. Respondían todas mis dudas rápidamente.",
+      "estrellas": 5,
+      "autor": "María F.",
+      "carrera": "Psicología",
+      "proyecto": "Trabajo de Grado",
+      "fecha": "10 May 2024"
+    },
+    {
+      "id": 4,
+      "texto": "Excelente atención al cliente desde el primer momento. Me guiaron en cada paso del proceso y el resultado final superó todas mis expectativas. ¡Los volvería a contratar sin dudarlo!",
+      "estrellas": 5,
+      "autor": "Juan D.",
+      "carrera": "Administración de Empresas",
+      "proyecto": "Proyecto de Investigación",
+      "fecha": "18 May 2024"
+    },
+    {
+      "id": 5,
+      "texto": "El análisis estadístico que realizaron para mi investigación fue absolutamente impecable. Los gráficos eran profesionales y las conclusiones estaban muy bien fundamentadas. Obtuve la máxima calificación.",
+      "estrellas": 5,
+      "autor": "Laura",
+      "carrera": "Sociología",
+      "proyecto": "Análisis Estadístico",
+      "fecha": "25 Feb 2024"
+    },
+    {
+      "id": 6,
+      "texto": "Aunque inicialmente el costo me pareció una inversión, valió cada centavo. La calidad del trabajo final fue extraordinaria y me ayudó a obtener la máxima calificación en mi proyecto de arquitectura.",
+      "estrellas": 5,
+      "autor": "Roberto",
+      "carrera": "Arquitectura",
+      "proyecto": "Proyecto Final",
+      "fecha": "12 Jul 2024"
+    },
+    {
+      "id": 7,
+      "texto": "Servicio excepcional. Cumplieron con todos los plazos y el trabajo fue de primera calidad. La comunicación fue fluida en todo momento y se adaptaron a mis necesidades específicas.",
+      "estrellas": 5,
+      "autor": "Sofia A.",
+      "carrera": "Derecho",
+      "proyecto": "Ensayo Académico",
+      "fecha": "08 Jun 2024"
+    },
+    {
+      "id": 8,
+      "texto": "Quedé maravillado con la calidad del trabajo. No solo cumplieron con lo solicitado, sino que agregaron valor con insights que no había considerado. Profesionales de verdad.",
+      "estrellas": 5,
+      "autor": "Miguel L. R.",
+      "carrera": "Medicina",
+      "proyecto": "Revisión Sistemática",
+      "fecha": "03 May 2024"
+    },
+    {
+      "id": 9,
+      "texto": "El mejor servicio académico que he contratado. La dedicación y profesionalismo del equipo se reflejó en un trabajo impecable que recibió felicitaciones de mis profesores.",
+      "estrellas": 5,
+      "autor": "Daniela Carolina C.",
+      "carrera": "Comunicación Social",
+      "proyecto": "Proyecto Multimedia",
+      "fecha": "28 May 2023"
+    },
+    {
+      "id": 10,
+      "texto": "Increíble experiencia de principio a fin. Desde la asesoría inicial hasta la entrega final, todo fue perfecto. El trabajo superó mis expectativas y aprendí mucho en el proceso.",
+      "estrellas": 5,
+      "autor": "Andrés F.",
+      "carrera": "Economía",
+      "proyecto": "Análisis Económico",
+      "fecha": "20 Jun 2025"
+    },
+    {
+      "id": 11,
+      "texto": "Recomiendo ampliamente sus servicios. La calidad del trabajo es consistentemente alta y el trato es muy profesional. Han sido clave en mi éxito académico.",
+      "estrellas": 5,
+      "autor": "Valentina S. L.",
+      "carrera": "Ingeniería Civil",
+      "proyecto": "Diseño Estructural",
+      "fecha": "14 Jul 2024"
+    },
+    {
+      "id": 12,
+      "texto": "Simplemente perfecto. Entregaron antes del plazo, el trabajo estaba excelentemente documentado y recibí soporte incluso después de la entrega. Servicio 10/10.",
+      "estrellas": 5,
+      "autor": "Javier A.",
+      "carrera": "Ciencias Políticas",
+      "proyecto": "Análisis Político",
+      "fecha": "05 May 2023"
+    }
+  ]
 }
