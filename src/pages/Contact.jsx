@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import Navbar from "../components/Navbar";
 import * as FaIcons from "react-icons/fa";
-import { ContactSection, FAQSection } from "../components/ContactSection";
+import ContactSection from "../components/ContactSection";
+import FAQSection from "../components/FAQSection";
 
 const Contact = () => {
   const heroRef = useRef(null);
@@ -44,9 +45,8 @@ const Contact = () => {
         const scrollY = window.scrollY;
         const maxScroll = 500;
         const opacity = 1 - Math.min(scrollY / maxScroll, 1);
-        heroRef.current.style.transform = `translateY(${
-          scrollY * 0.3
-        }px) scale(${1 + scrollY * 0.0002})`;
+        heroRef.current.style.transform = `translateY(${scrollY * 0.3
+          }px) scale(${1 + scrollY * 0.0002})`;
         if (bounceRef.current) {
           bounceRef.current.style.opacity = opacity;
         }
