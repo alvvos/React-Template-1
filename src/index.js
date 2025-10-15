@@ -1,13 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import Home from './pages/Home';
-import Contact from './pages/Contact';
-import NotFound from './components/NotFound';
-import './index.css';
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import React from "react";
+import ReactDOM from "react-dom/client";
+import Home from "./pages/Home";
+import Contact from "./pages/Contact";
+import NotFound from "./components/NotFound";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import "./index.css";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import LegalNotice from "./pages/LegalNotice";
 
 const router = createBrowserRouter([
   {
@@ -16,12 +15,17 @@ const router = createBrowserRouter([
   },
   {
     path: "/contacto",
-    element: <Contact />
+    element: <Contact />,
   },
   {
+    path: "/privacidad",
+    element: <PrivacyPolicy />,
+  },
+  { path: "/legal", element: <LegalNotice /> },
+  {
     path: "*",
-    element: <NotFound />
-  }
+    element: <NotFound />,
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

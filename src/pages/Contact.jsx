@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import Navbar from "../components/Navbar";
-import * as FaIcons from "react-icons/fa";
 import { ContactSection, FAQSection } from "../components/ContactSection";
+import Footer from "../components/Footer";
 
 const Contact = () => {
   const heroRef = useRef(null);
@@ -10,13 +10,6 @@ const Contact = () => {
   const fullText = "Hablemos de tu proyecto";
   const [currentIndex, setCurrentIndex] = useState(0);
   const bounceRef = useRef(null);
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitSuccess, setSubmitSuccess] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   useEffect(() => {
@@ -59,25 +52,6 @@ const Contact = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitSuccess(true);
-      setFormData({ name: "", email: "", message: "" });
-    }, 2000);
-  };
 
   return (
     <div className="bg-dark text-light min-h-screen">
@@ -123,6 +97,7 @@ const Contact = () => {
       </section>
       <ContactSection />
       <FAQSection />
+      <Footer />
     </div>
   );
 };

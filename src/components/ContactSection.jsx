@@ -31,13 +31,12 @@ const ContactSection = () => {
     setSubmitError("");
 
     try {
-      const response = await axios.post("/api/send-email", {
+      const response = await axios.post("../api/send-email", {
         formData: formData,
       });
 
       if (response.status === 200) {
         setSubmitSuccess(true);
-        // Reset form
         setFormData({
           degreeType: "",
           degreeName: "",

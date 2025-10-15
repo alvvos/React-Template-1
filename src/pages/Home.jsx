@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import Reviews from "../components/Reviews";
 import WorkProcess from "../components/WorkProcess";
 import { FiMessageCircle, FiBookOpen, FiEye, FiShield } from "react-icons/fi";
+import Footer from "../components/Footer";
 
 const Home = () => {
   const heroRef = useRef(null);
@@ -132,9 +133,7 @@ const Home = () => {
           </div>
         )}
       </section>
-
       <WorkProcess />
-
       <section className="py-12 md:py-20 px-4 md:px-24 w-full bg-gradient-to-b from-primary to-secondary">
         <div className="">
           <h2 className="text-3xl md:text-5xl mb-8 md:mb-16 text-center font-Garet bg-clip-text text-transparent bg-gradient-to-r from-light to-accent animate-fadeIn py-2">
@@ -325,6 +324,7 @@ const Home = () => {
           </button>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };

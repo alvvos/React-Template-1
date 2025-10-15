@@ -19,7 +19,7 @@ const Review = ({ texto, estrellas, autor, carrera, proyecto, fecha }) => {
   };
 
   return (
-    <div className="w-full h-full bg-gradient-to-r from-light to-turquesa p-4 md:p-6 flex flex-col justify-between">
+    <div className="w-full h-min-screen bg-gradient-to-r from-light to-turquesa p-4 md:p-6 flex flex-col justify-between">
       <div className="flex justify-between items-start mb-3">
         <div className="flex">
           {[...Array(5)].map((_, index) => (
