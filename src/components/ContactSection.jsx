@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import * as FaIcons from 'react-icons/fa';
-import emailjs from '@emailjs/browser';
+import React, { useState } from "react";
+import * as FaIcons from "react-icons/fa";
+import emailjs from "@emailjs/browser";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -33,11 +33,6 @@ const ContactSection = () => {
     setSubmitError("");
 
     try {
-<<<<<<< HEAD
-      const response = await axios.post("../api/send-email", {
-        formData: formData,
-      });
-=======
       const result = await emailjs.send(
         process.env.REACT_APP_EMAILJS_SERVICE_ID,
         process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
@@ -49,17 +44,16 @@ const ContactSection = () => {
           pagesWords: formData.pagesWords,
           measureType: formData.measureType,
           deadline: formData.deadline,
-          additionalInfo: formData.additionalInfo || 'No proporcionada',
+          additionalInfo: formData.additionalInfo || "No proporcionada",
           user_email: formData.email,
-          phone: formData.phone || 'No proporcionado',
-          to_email: 'contacto@tfgfactory.com',
-          date: new Date().toLocaleString('es-ES')
+          phone: formData.phone || "No proporcionado",
+          to_email: "contacto@tfgfactory.com",
+          date: new Date().toLocaleString("es-ES"),
         },
         process.env.REACT_APP_EMAILJS_PUBLIC_KEY
       );
->>>>>>> 6deb7cfe26d2c6768a168911b5ddfd7d59e350ab
 
-      if (result.text === 'OK') {
+      if (result.text === "OK") {
         setSubmitSuccess(true);
         setFormData({
           degreeType: "",
@@ -296,7 +290,10 @@ const ContactSection = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="animate-fadeInUp" style={{ animationDelay: "1.2s" }}>
+              <div
+                className="animate-fadeInUp"
+                style={{ animationDelay: "1.2s" }}
+              >
                 <label className="block mb-3 text-lg font-Poppins-Medium">
                   Email de contacto *
                 </label>
@@ -311,7 +308,10 @@ const ContactSection = () => {
                 />
               </div>
 
-              <div className="animate-fadeInUp" style={{ animationDelay: "1.2s" }}>
+              <div
+                className="animate-fadeInUp"
+                style={{ animationDelay: "1.2s" }}
+              >
                 <label className="block mb-3 text-lg font-Poppins-Medium">
                   Teléfono (opcional)
                 </label>
