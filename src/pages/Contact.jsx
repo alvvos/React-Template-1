@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import Navbar from "../components/Navbar";
-import { ContactSection, FAQSection } from "../components/ContactSection";
+import ContactSection from "../components/ContactSection";
 import Footer from "../components/Footer";
+import FAQSection from "../components/FAQSection";
 
 const Contact = () => {
   const heroRef = useRef(null);

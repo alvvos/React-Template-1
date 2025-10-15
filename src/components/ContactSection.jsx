@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import * as FaIcons from "react-icons/fa";
-import axios from "axios";
+import React, { useState } from 'react';
+import * as FaIcons from 'react-icons/fa';
+import emailjs from '@emailjs/browser';
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -12,6 +12,8 @@ const ContactSection = () => {
     measureType: "páginas",
     deadline: "",
     additionalInfo: "",
+    email: "",
+    phone: "",
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -31,11 +33,33 @@ const ContactSection = () => {
     setSubmitError("");
 
     try {
+<<<<<<< HEAD
       const response = await axios.post("../api/send-email", {
         formData: formData,
       });
+=======
+      const result = await emailjs.send(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+        {
+          degreeType: formData.degreeType,
+          degreeName: formData.degreeName,
+          serviceNeeded: formData.serviceNeeded,
+          projectTitle: formData.projectTitle,
+          pagesWords: formData.pagesWords,
+          measureType: formData.measureType,
+          deadline: formData.deadline,
+          additionalInfo: formData.additionalInfo || 'No proporcionada',
+          user_email: formData.email,
+          phone: formData.phone || 'No proporcionado',
+          to_email: 'contacto@tfgfactory.com',
+          date: new Date().toLocaleString('es-ES')
+        },
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+      );
+>>>>>>> 6deb7cfe26d2c6768a168911b5ddfd7d59e350ab
 
-      if (response.status === 200) {
+      if (result.text === 'OK') {
         setSubmitSuccess(true);
         setFormData({
           degreeType: "",
@@ -271,9 +295,40 @@ const ContactSection = () => {
               ></textarea>
             </div>
 
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="animate-fadeInUp" style={{ animationDelay: "1.2s" }}>
+                <label className="block mb-3 text-lg font-Poppins-Medium">
+                  Email de contacto *
+                </label>
+                <input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  className="w-full bg-secondary/70 border-2 border-accent/30 rounded-xl px-4 py-4 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/50 transition-all duration-500 text-light placeholder-light/50"
+                  placeholder="tu@email.com"
+                  required
+                />
+              </div>
+
+              <div className="animate-fadeInUp" style={{ animationDelay: "1.2s" }}>
+                <label className="block mb-3 text-lg font-Poppins-Medium">
+                  Teléfono (opcional)
+                </label>
+                <input
+                  type="tel"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  className="w-full bg-secondary/70 border-2 border-accent/30 rounded-xl px-4 py-4 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/50 transition-all duration-500 text-light placeholder-light/50"
+                  placeholder="+34 123 456 789"
+                />
+              </div>
+            </div>
+
             <div
               className="animate-fadeInUp"
-              style={{ animationDelay: "1.2s" }}
+              style={{ animationDelay: "1.3s" }}
             >
               <button
                 type="submit"
@@ -337,68 +392,4 @@ const ContactSection = () => {
   );
 };
 
-const FAQSection = () => {
-  return (
-    <section className="py-12 bg-gradient-to-b from-secondary to-primary">
-      <div className="max-w-5xl mx-auto px-6">
-        <h2 className="text-4xl md:text-4xl font-Garet mb-16 text-center bg-clip-text text-transparent bg-gradient-to-r from-light to-accent transform scale-110">
-          Preguntas frecuentes
-        </h2>
-
-        <div className="space-y-6">
-          {[
-            {
-              question: "¿Cuánto tiempo tardan en desarrollar un TFG/TFM?",
-              answer:
-                "El tiempo varía según la complejidad y extensión del trabajo. Para un TFG estándar suele ser de 2-4 semanas, mientras que un TFM puede llevar 3-6 semanas. Trabajamos con entregas parciales para que puedas hacer seguimiento.",
-            },
-            {
-              question: "¿Garantizan la originalidad del trabajo?",
-              answer:
-                "Sí, todos nuestros trabajos incluyen informe de originalidad verificada. Utilizamos herramientas antiplagio profesionales y entregamos el certificado correspondiente.",
-            },
-            {
-              question: "¿Ofrecen revisiones si el tutor solicita cambios?",
-              answer:
-                "Sí, incluidas revisiones ilimitadas durante el desarrollo y 30 días de soporte post-entrega para ajustes solicitados por el tutor, sin coste adicional.",
-            },
-            {
-              question: "¿Cómo manejan la confidencialidad de los datos?",
-              answer:
-                "Trabajamos con absoluta confidencialidad. Tus datos personales y académicos están protegidos y nunca compartimos información con terceros.",
-            },
-            {
-              question: "¿Puedo solicitar entregas parciales del trabajo?",
-              answer:
-                "Sí, organizamos el trabajo en entregas parciales según tu cronograma preferido. Puedes solicitar avances cuando lo necesites para presentar a tu tutor.",
-            },
-            {
-              question: "¿Qué pasa si necesito el trabajo de urgencia?",
-              answer:
-                "Ofrecemos servicio express para proyectos con plazos muy ajustados. Contacta con nosotros para evaluar la viabilidad y costes adicionales.",
-            },
-          ].map((faq, i) => (
-            <div
-              key={i}
-              className="border-2 border-accent/10 bg-secondary/30 rounded-2xl p-8 hover:border-accent/30 transition-all duration-500 backdrop-blur-sm animate-fadeInUp"
-              style={{
-                animationDelay: `${0.3 + i * 0.1}s`,
-                animationFillMode: "forwards",
-              }}
-            >
-              <h3 className="text-xl font-Garet font-bold mb-4 flex items-center gap-3">
-                <FaIcons.FaQuestionCircle className="text-accent w-8 h-8 md:w-6 md:h-6" />
-                {faq.question}
-              </h3>
-              <p className="text-light/80 font-Poppins-Medium pl-9">
-                {faq.answer}
-              </p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-};
-
-export { ContactSection, FAQSection };
+export default ContactSection;
