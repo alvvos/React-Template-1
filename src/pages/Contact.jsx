@@ -38,9 +38,8 @@ const Contact = () => {
         const scrollY = window.scrollY;
         const maxScroll = 500;
         const opacity = 1 - Math.min(scrollY / maxScroll, 1);
-        heroRef.current.style.transform = `translateY(${
-          scrollY * 0.3
-        }px) scale(${1 + scrollY * 0.0002})`;
+        heroRef.current.style.transform = `translateY(${scrollY * 0.3
+          }px) scale(${1 + scrollY * 0.0002})`;
         if (bounceRef.current) {
           bounceRef.current.style.opacity = opacity;
         }
@@ -87,14 +86,16 @@ const Contact = () => {
           </h1>
         </div>
 
-        <div
-          ref={bounceRef}
-          className="absolute bottom-20 transform -translate-x-1/2 animate-bounce"
-        >
-          <div className="w-8 h-12 border-2 border-accent rounded-full flex justify-center items-start p-1">
-            <div className="w-1 h-3 bg-accent rounded-full animate-scrollIndicator"></div>
+        {!isMobile && (
+          <div
+            ref={bounceRef}
+            className="absolute bottom-10 transform -translate-x-1/2 animate-bounce"
+          >
+            <div className="w-8 h-12 border-2 border-accent rounded-full flex justify-center items-start p-1">
+              <div className="w-1 h-3 bg-accent rounded-full animate-scrollIndicator"></div>
+            </div>
           </div>
-        </div>
+        )}
       </section>
       <ContactSection />
       <FAQSection />
